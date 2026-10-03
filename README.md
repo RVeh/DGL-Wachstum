@@ -4,7 +4,7 @@
 
 ## GeoGebra: Wachstumsmodelle
 
-Die [GeoGebra-Simulationen](https://rveh.github.io/DGL-Wachstum/) lassen sich direkt im Browser öffnen. Sie veranschaulichen die zufällige Neuanordnung von Niederschlagswerten und die Untersuchung von Anstiegen und Rekorden.
+Die [GeoGebra-Dateien](https://rveh.github.io/DGL-Wachstum/) lassen sich direkt im Browser öffnen. Sie veranschaulichen die zufällige Neuanordnung von Niederschlagswerten und die Untersuchung von Anstiegen und Rekorden.
 
 Alternativ können die [GeoGebra-Dateien heruntergeladen](https://github.com/RVeh/DGL-Wachstum/tree/main/geogebra) und in GeoGebra Classic geöffnet werden. Für die eingebettete Browseransicht werden eine Internetverbindung und aktiviertes JavaScript benötigt.
 

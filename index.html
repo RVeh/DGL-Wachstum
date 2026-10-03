@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
@@ -8,15 +8,11 @@
     content="width=device-width, initial-scale=1"
   >
 
-  <title>Wachstmsmodelle erkunden</title>
+  <title>Anstiege und Rekorde – DWD-Niederschlag</title>
 
   <script src="https://www.geogebra.org/apps/deployggb.js"></script>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont,
@@ -26,18 +22,13 @@
     }
 
     header {
-      padding: 12px;
+      padding: 10px 12px;
       background: white;
       border-bottom: 1px solid #cccccc;
     }
 
-    .header-inhalt {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
     h1 {
-      margin: 0 0 10px 0;
+      margin: 0 0 8px 0;
       font-size: 1.4rem;
     }
 
@@ -93,18 +84,22 @@
 <body>
 
   <header>
-    <div class="header-inhalt">
-      <h1>Wachstumsmodelle mit GeoGebra</h1>
+    <h1>Anstiege und Rekorde</h1>
 
-      <nav
-        id="dateiauswahl"
-        aria-label="Auswahl der GeoGebra-Datei"
-      ></nav>
-    </div>
+    <nav
+      id="dateiauswahl"
+      aria-label="Auswahl der GeoGebra-Datei"
+    ></nav>
   </header>
 
   <main>
     <h2 id="dateititel"></h2>
+    <p style="max-width: 1200px; margin: 0 auto 12px;">
+      Das Laden von GeoGebra kann einen Moment dauern.
+      <a id="dateidownload" href="geogebra/RekordeAnstiegeSimulationen.ggb" download>GeoGebra-Datei herunterladen</a>
+      · <a href="https://github.com/RVeh/dwd-niederschlag">Zu allen Materialien</a>
+    </p>
+    <noscript>Bitte aktivieren Sie JavaScript, um die Simulation im Browser zu nutzen.</noscript>
 
     <div class="ggb-container">
       <div id="ggb-element"></div>
@@ -115,36 +110,36 @@
     /*
       Hier werden die verfügbaren GeoGebra-Dateien eingetragen.
 
+      Der Schlüssel links, zum Beispiel "AnstiegeRekorde", wird nur
+      für die Internetadresse verwendet.
+
       "titel" erscheint auf der Schaltfläche.
-      "pfad" muss exakt dem Dateinamen im Repository entsprechen.
+
+      "pfad" muss exakt dem Speicherort im Repository entsprechen.
     */
 
-    const dateien = {
-      exponentiell: {
-        titel: "exponentiell",
-        pfad: "geogebra/01-Euler-Richtungsfeld-DGL-exponentiell.ggb"
-      },
-
-      begrenzt: {
-        titel: "begrenzt",
-        pfad: "geogebra/02-Euler-Richtungsfeld-DGL-begrenzt.ggb"
-      },
-
-      logistisch: {
-      titel: "logistisch",
-      pfad: "geogebra/03-Euler-Richtungsfeld-DGL.ggb"
+   const dateien = {
+     AnstiegeRekorde: {
+        titel: "Anstiege und Rekorde",
+        pfad: "geogebra/RekordeAnstiegeSimulationen.ggb"
       },
      
-      Simulation-SI: {
-      titel: "Simulation-SI",
-      pfad: "geogebra/04-Simulation_Verbreitung.ggb"
-      },
-      
+      rekorde: {
+          titel: "Anzahl Rekorde",
+          pfad: "geogebra/RekordeSimulationen.ggb"
+        },
+
+       anstiege: {
+          titel: "Anzahl Anstiege",
+          pfad: "geogebra/AnstiegeSimulationen.ggb"
+        }
     };
 
-
     /*
-      Gewählte Datei aus der Internetadresse auslesen.
+      Gewählte Datei aus der Internetadresse auslesen,
+      zum Beispiel:
+
+      ?datei=AnstiegeRekorde
     */
 
     const urlParameter =
@@ -157,11 +152,7 @@
       Object.keys(dateien)[0];
 
     const aktiverSchluessel =
-      gewuenschteDatei &&
-      Object.prototype.hasOwnProperty.call(
-        dateien,
-        gewuenschteDatei
-      )
+      Object.prototype.hasOwnProperty.call(dateien, gewuenschteDatei)
         ? gewuenschteDatei
         : ersteDatei;
 
@@ -170,17 +161,18 @@
 
 
     /*
-      Seitentitel und Überschrift setzen.
+      Titel der Seite und Überschrift setzen.
     */
 
     document.title =
-      aktiveDatei.titel +
-      " – Wachstumsmodelle";
+      aktiveDatei.titel + " – DWD-Niederschlag";
 
     document
       .getElementById("dateititel")
       .textContent = aktiveDatei.titel;
 
+
+    document.getElementById("dateidownload").href = aktiveDatei.pfad;
 
     /*
       Auswahlleiste automatisch erzeugen.
@@ -220,7 +212,7 @@
     const ggbParameter = {
       appName: "classic",
 
-      filename: aktiveDatei.pfad,
+      filename: new URL(aktiveDatei.pfad, document.baseURI).href,
 
       width: 1200,
       height: 800,
@@ -237,7 +229,6 @@
       enableFileFeatures: true,
       enableUndoRedo: true,
 
-      showResetIcon: true,
       showFullscreenButton: true,
 
       language: "de"
@@ -256,3 +247,4 @@
 
 </body>
 </html>
+

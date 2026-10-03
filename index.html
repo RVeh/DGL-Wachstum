@@ -8,7 +8,7 @@
     content="width=device-width, initial-scale=1"
   >
 
-  <title>Anstiege und Rekorde – DWD-Niederschlag</title>
+  <title>Wachstumsmodelle mit GeoGebra erkunden</title>
 
   <script src="https://www.geogebra.org/apps/deployggb.js"></script>
 
@@ -84,7 +84,7 @@
 <body>
 
   <header>
-    <h1>Anstiege und Rekorde</h1>
+    <h1>Wachstumsmodelle</h1>
 
     <nav
       id="dateiauswahl"
@@ -119,19 +119,24 @@
     */
 
    const dateien = {
-     AnstiegeRekorde: {
-        titel: "Anstiege und Rekorde",
-        pfad: "geogebra/RekordeAnstiegeSimulationen.ggb"
+     exponentiell: {
+        titel: "exponentiell",
+        pfad: "geogebra/01-Euler-Richtungsfeld-DGL-exponentiell.ggb"
       },
      
-      rekorde: {
-          titel: "Anzahl Rekorde",
-          pfad: "geogebra/RekordeSimulationen.ggb"
+      begrenzt: {
+          titel: "begrenzt",
+          pfad: "geogebra/02-Euler-Richtungsfeld-DGL-begrenzt.ggb"
         },
 
-       anstiege: {
-          titel: "Anzahl Anstiege",
-          pfad: "geogebra/AnstiegeSimulationen.ggb"
+       logistisch: {
+          titel: "logistisch",
+          pfad: "geogebra/03-Euler-Richtungsfeld-DGL-logistisch.ggb"
+        },
+
+      ausbreitung: {
+          titel: "Simulation-SI",
+          pfad: "geogebra/04-Simulation_Verbreitung.ggb"
         }
     };
 
@@ -139,7 +144,7 @@
       Gewählte Datei aus der Internetadresse auslesen,
       zum Beispiel:
 
-      ?datei=AnstiegeRekorde
+      ?datei=exponentiell
     */
 
     const urlParameter =
@@ -165,7 +170,7 @@
     */
 
     document.title =
-      aktiveDatei.titel + " – DWD-Niederschlag";
+      aktiveDatei.titel + " – Wachstum";
 
     document
       .getElementById("dateititel")

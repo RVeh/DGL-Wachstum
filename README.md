@@ -15,21 +15,12 @@ Enthalten sind vorbereitete Excel-Dateien, eine GeoGebra-Simulation, ein erläut
 | Datenzugang, Aufbereitung und Auswertung nachvollziehen oder eine andere Station wählen | [Python-Notebook mit Binder starten](https://mybinder.org/v2/gh/RVeh/dwd-niederschlag/main?labpath=notebooks%2FDWD_Niederschlag_Ebene1.ipynb) |
 | Das Notebook ohne Ausführung lesen | [Notebook auf GitHub](notebooks/DWD_Niederschlag_Ebene1.ipynb) · [PDF-Fassung](pdf/DWD_Niederschlag_Ebene1.pdf) |
 
-## Mit Excel beginnen
 
-Die [Excel-Dateien](excel/) ermöglichen einen Einstieg ohne Python-Programmierung:
-
-- [Niederschlagsauswertung Hannover-Herrenhausen](excel/niederschlag_auswertung_Hannover-Herrenhausen_02011.xlsx): aufbereitete Daten für die Untersuchung der Niederschläge.
-- [Modellierung der Jahressummen](excel/modellierung_jahressummen_Hannover-Herrenhausen_02011.xlsx): Ergebnisse des stochastischen Modellvergleichs.
-- [DWD-Stationsübersicht](excel/stationsuebersicht_DWD.xlsx): Orientierung bei der Auswahl einer Messstation.
-
-Zum Öffnen eine Datei auf GitHub auswählen und über die Download-Schaltfläche herunterladen. Die bereitgestellten Dateien dokumentieren einen bestimmten Datenstand; eine neue Notebook-Ausführung kann inzwischen hinzugekommene DWD-Daten einbeziehen.
-
-## GeoGebra: Anstiege und Rekorde
+## GeoGebra: Wachstumsmodelle
 
 Die [GeoGebra-Simulationen](https://rveh.github.io/DGL-Wachstum/) lassen sich direkt im Browser öffnen. Sie veranschaulichen die zufällige Neuanordnung von Niederschlagswerten und die Untersuchung von Anstiegen und Rekorden.
 
-Alternativ können die [GeoGebra-Dateien heruntergeladen](https://github.com/RVeh/dwd-niederschlag/tree/main/geogebra) und in GeoGebra Classic geöffnet werden. Für die eingebettete Browseransicht werden eine Internetverbindung und aktiviertes JavaScript benötigt.
+Alternativ können die [GeoGebra-Dateien heruntergeladen](https://github.com/RVeh/DGL-Wachstum/tree/main/geogebra) und in GeoGebra Classic geöffnet werden. Für die eingebettete Browseransicht werden eine Internetverbindung und aktiviertes JavaScript benötigt.
 
 
 ## Python-Notebook mit Binder ausführen

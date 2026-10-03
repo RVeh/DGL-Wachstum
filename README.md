@@ -1,19 +1,5 @@
-# Niederschlagsdaten im Mathematikunterricht
+# Wachstumsmodelle und Differentialgleichungen im Mathematikunterricht
 
-Begleitmaterial zum Artikel **„Große Realdatensätze im Mathematikunterricht – vom Datenzugang zur Modellierung“** von Reimund Vehling.
-
-Wie lässt sich untersuchen, ob ein Sommer besonders verregnet war? Das Repository verbindet die Erschließung realer Niederschlagsdaten des Deutschen Wetterdienstes (DWD) mit ihrer Beschreibung, stochastischen Modellierung und begründeten Beurteilung. Als Beispiel dient die Station **Hannover-Herrenhausen (Stationskennung 02011)**.
-
-Enthalten sind vorbereitete Excel-Dateien, eine GeoGebra-Simulation, ein erläutertes Python-Notebook mit Arbeitsaufträgen sowie PDF-Dokumente, Grafiken und Quellennachweise. Die Materialien lassen sich je nach Lerngruppe, Fragestellung und verfügbarer Zeit unterschiedlich einsetzen.
-
-## Schnell zu den Materialien
-
-| Einstieg | Material |
-| --- | --- |
-| Niederschlagsdaten unmittelbar untersuchen | [Vorbereitete Excel-Auswertung](excel/niederschlag_auswertung_Hannover-Herrenhausen_02011.xlsx) |
-| Rekorde und Anstiege durch zufällige Neuanordnung erkunden | [GeoGebra-Simulation im Browser](https://rveh.github.io/dwd-niederschlag/) |
-| Datenzugang, Aufbereitung und Auswertung nachvollziehen oder eine andere Station wählen | [Python-Notebook mit Binder starten](https://mybinder.org/v2/gh/RVeh/dwd-niederschlag/main?labpath=notebooks%2FDWD_Niederschlag_Ebene1.ipynb) |
-| Das Notebook ohne Ausführung lesen | [Notebook auf GitHub](notebooks/DWD_Niederschlag_Ebene1.ipynb) · [PDF-Fassung](pdf/DWD_Niederschlag_Ebene1.pdf) |
 
 
 ## GeoGebra: Wachstumsmodelle

@@ -34,13 +34,7 @@ python -m pip install -r requirements.txt
 
 Anschließend `notebooks/DWD_Niederschlag_Ebene1.ipynb` in Jupyter öffnen und die Zellen der Reihe nach ausführen. Eine Jupyter-Umgebung wird hierbei vorausgesetzt; `requirements.txt` enthält die zusätzlichen Pakete für die Datenverarbeitung und Auswertung.
 
-## Datenherkunft und Aussagekraft
 
-Die Niederschlagsdaten stammen aus dem [Climate Data Center des DWD – tägliche Niederschläge](https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/more_precip/). Die Messreihe für Hannover-Herrenhausen beginnt am **1. Januar 1931**; der verfügbare Endzeitpunkt hängt vom Datenstand beim Abruf ab.
-
-Der Ordner [quellen/](quellen/) enthält die für den bereitgestellten Datenstand verwendeten Archive, die eingelesene Stationsübersicht und Nachweise zum Abruf. Die dokumentierten Zeiträume, Messlücken und Aufbereitungsentscheidungen sind bei der Interpretation zu berücksichtigen. Stationsdaten beschreiben zunächst den jeweiligen Messort; sie stehen nicht ohne Weiteres für ein ganzes Stadtgebiet.
-
-Beim Modellvergleich werden vorhandene Jahreswerte zufällig neu angeordnet. Die simulierten Verteilungen dienen der Einordnung der beobachteten Rekord- und Anstiegszahlen. Sie erklären keine physikalischen Ursachen und liefern für sich genommen keinen Nachweis für oder gegen eine klimatische Veränderung.
 
 ## Aufbau des Repositorys
 
@@ -49,11 +43,6 @@ README.md          Orientierung und Zugänge zu den Materialien
 index.html         Browseransicht der GeoGebra-Simulation
 requirements.txt   Python-Pakete für das Notebook
 notebooks/         Zentrales Python-Notebook
-excel/             Vorbereitete Excel-Dateien
-geogebra/          GeoGebra-Datei zu Rekorden und Anstiegen
-fig/               Erzeugte Grafiken als PDF
+geogebra/          GeoGebra-Datei zu Wachstumsmodellen
 pdf/               Artikel und PDF-Fassung des Notebooks
-quellen/           DWD-Archive, Stationsübersicht und Quellennachweise
 ```
-
-Neue Notebook-Durchläufe legen ihre Ergebnisse separat unter `ausgabe/` an.
